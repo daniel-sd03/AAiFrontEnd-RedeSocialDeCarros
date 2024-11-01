@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+  background-color: #17191b;
+}
+::-webkit-scrollbar {
+  width: 12px;  /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+  background: #2c2f33;  /* Cor de fundo da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0b0b0c;  /* Cor do "thumb" (parte que você arrasta) */
+  border-radius: 10px;  /* Arredondar os cantos do "thumb" */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1c1d20;  /* Cor do "thumb" ao passar o mouse */
+}
+
+/* Estilo da barra de rolagem para Firefox */
+* {
+  scrollbar-width: thin;  /* Controla a largura da barra de rolagem */
+  scrollbar-color: #100f12 #2c2f33;  /* "thumb" e fundo da barra de rolagem */
+}

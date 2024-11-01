@@ -1,0 +1,57 @@
+
+/* Importando a fonte Roboto */
+html,
+body {
+  height: 100%;
+  font-family: 'Agbalumo', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #17191b;
+  color: rgb(255, 255, 255);
+}
+
+/* Estilização da barra lateral esquerda */
+#sidebar {
+  width: 250px;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  background-color: #17191b;
+  height: calc(100vh - 56px);
+  padding-top: 1rem;
+}
+
+/* Estilização da barra lateral direita */
+#sidebar-right {
+  width: 290px;
+  position: fixed;
+  top: 56px;
+  right: 0;
+  background-color: #151718;
+  height: 50%;
+  margin-top: 5%;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+/* Estilização da navbar */
+.navbar {
+  background-color: #282a33;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  height: 56px;
+}
+
+/* Estilização do conteúdo central */
+.content {
+  margin-left: 400px;
+  margin-right: 400px;
+  padding: 20px;
+  background-color: #17191b;
+  overflow-y: visible;
+  /* Adiciona rolagem vertical se o conteúdo exceder a altura */
+  position: relative;
+  top: 56px;
+}
