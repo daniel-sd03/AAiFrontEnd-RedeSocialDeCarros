@@ -28,17 +28,17 @@
               <p class="text-white-50 mb-5">Por favor, Digite seu login e senha!</p>
 
               <div data-mdb-input-init class="form-outline form-white mb-4">
-                <input type="email" id="typeEmailX" class="form-control form-control-lg" />
+                <input type="email" id="typeEmailX" class="form-control form-control-lg" [(ngModel)]="email"/>
                 <label class="form-label" for="typeEmailX">Email</label>
               </div>
 
               <div data-mdb-input-init class="form-outline form-white mb-4">
-                <input type="password" id="typePasswordX" class="form-control form-control-lg" />
-                <label class="form-label" for="typePasswordX">Password</label>
+                <input type="password" id="typePasswordX" class="form-control form-control-lg" [(ngModel)]="senha"/>
+                <label class="form-label" for="typePasswordX">senha</label>
               </div>
 
               <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5"
-                type="submit">Login</button>
+                type="button" (click)="ValidarLogin()" >Login</button>
 
             </div>
 
