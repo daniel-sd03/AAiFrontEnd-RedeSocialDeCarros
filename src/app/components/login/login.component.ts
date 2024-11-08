@@ -13,27 +13,35 @@ import { provideHttpClient } from '@angular/common/http';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  usuarios: Usuario [] = []
+  usuarios: Usuario[] = []
   email: String = "";
-  senha: String= "";
+  senha: String = "";
+  usariolog = {
+    nome: '',
+    login: ''
+  };
 
-  constructor(private rota: Router, private  usuarioService: UsuarioService){}
+  constructor(private rota: Router, private usuarioService: UsuarioService) { }
 
-  ValidarLogin(){
-    this.usuarioService.getUsuarios().subscribe((dado) =>{
+  ValidarLogin() {
+    this.usuarioService.getUsuarios().subscribe((dado) => {
       this.usuarios = dado;
 
-      this.usuarios.forEach(usuario => {
-        if(usuario.login == this.email && usuario.senha == this.senha){
+      for (const usuario of this.usuarios){
+        if (usuario.login == this.email && usuario.senha == this.senha) {
+          this.usariolog.nome =  usuario.nome;
+          this.usariolog.login = usuario.login;
+          localStorage.setItem('usariolog', JSON.stringify(this.usariolog));//enviando dados do usuario logado
+          localStorage.setItem('isLoggedIn', 'true');
           this.rota.navigate(['/feed']);
-        }else{
-          alert("Erro");
+          return;
         }
-      });
+      }
+      alert('Usuario invalido');
+    })
+  }
 
-    }
-
-
-  )}
-
+  redirecionaCadastro() {
+    this.rota.navigate(['/cadastro']);
+  }
 }

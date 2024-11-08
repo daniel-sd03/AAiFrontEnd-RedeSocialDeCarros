@@ -2,11 +2,19 @@
   "usuarios": [
     {
       "id": 1,
-      "nome": "daniel",
+      "nome": "administrador",
       "dtNasc": "12/12/2000",
       "foto": "url",
       "login": "admin",
       "senha": "admin"
+    },
+    {
+      "id": 2,
+      "nome": "daniel",
+      "dtNasc": "12/12/2000",
+      "foto": "url",
+      "login": "daniel",
+      "senha": "daniel"
     }
   ],
 
