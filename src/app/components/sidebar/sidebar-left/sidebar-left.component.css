@@ -1,0 +1,52 @@
+#sidebar {
+  width: 250px;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  background-color: #17191b;
+  height: calc(100vh - 56px);
+  padding-top: 1rem;
+}
+
+.imgBandeira{
+  background-image: url("../../../../assets/icon_bandeiraQuadriculada.png");
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.imgHome{
+  background-image: url("../../../../assets/icone_home.png");
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+.imgPerfil{
+  background-image: url("../../../../assets/icone_perfil.webp");
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+.imgConfig{
+  background-image: url("../../../../assets/icone_config.png");
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+.imgSair{
+  background-image: url("../../../../assets/icone_sair.png");
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+

@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginComponent } from '../login/login.component';
+import { NavbarComponent } from "../navbar/navbar.component";
+import { SidebarLeftComponent } from "../sidebar/sidebar-left/sidebar-left.component";
+import { SidebarRightComponent } from "../sidebar/sidebar-right/sidebar-right.component";
 
 @Component({
   selector: 'app-feed',
   standalone: true,
-  imports: [],
+  imports: [NavbarComponent, SidebarLeftComponent, SidebarRightComponent],
   templateUrl: './feed.component.html',
   styleUrl: './feed.component.css'
 })
@@ -29,10 +32,7 @@ export class FeedComponent implements OnInit {
     }
   }
 
-  logout() {
-    localStorage.clear();
-    this.rota.navigate(['/']);
-  }
+ 
 
 }
 

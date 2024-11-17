@@ -3,12 +3,12 @@ import { NavbarComponent } from "../navbar/navbar.component";
 import { SidebarLeftComponent } from "../sidebar/sidebar-left/sidebar-left.component";
 
 @Component({
-  selector: 'app-feed-usuario',
+  selector: 'app-publicacao',
   standalone: true,
   imports: [NavbarComponent, SidebarLeftComponent],
-  templateUrl: './feed-usuario.component.html',
-  styleUrl: './feed-usuario.component.css'
+  templateUrl: './publicacao.component.html',
+  styleUrl: './publicacao.component.css'
 })
-export class FeedUsuarioComponent {
+export class PublicacaoComponent {
 
 }

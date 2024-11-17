@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { UsuarioService } from '../../services/usuario.service';
 import { Usuario } from '../../usuario';
 import { provideHttpClient } from '@angular/common/http';
+import { AuthserviceService } from '../../services/authservice.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ import { provideHttpClient } from '@angular/common/http';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  usuarios: Usuario[] = []
+  usuarios: Usuario[] = [];
   email: String = "";
   senha: String = "";
   usariolog = {
@@ -21,7 +22,8 @@ export class LoginComponent {
     login: ''
   };
 
-  constructor(private rota: Router, private usuarioService: UsuarioService) { }
+  constructor(private rota: Router, private usuarioService: UsuarioService, private authService: AuthserviceService) { }
+
 
   ValidarLogin() {
     this.usuarioService.getUsuarios().subscribe((dado) => {
@@ -32,7 +34,7 @@ export class LoginComponent {
           this.usariolog.nome =  usuario.nome;
           this.usariolog.login = usuario.login;
           localStorage.setItem('usariolog', JSON.stringify(this.usariolog));//enviando dados do usuario logado
-          localStorage.setItem('isLoggedIn', 'true');
+          this.authService.login();//Enviando token de usuario logado
           this.rota.navigate(['/feed']);
           return;
         }

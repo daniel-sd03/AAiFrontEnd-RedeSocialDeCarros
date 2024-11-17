@@ -1,19 +1,47 @@
 import { Component } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UsuarioService } from '../../services/usuario.service';
+import { Usuario } from '../../usuario';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-cadastro',
   standalone: true,
-  imports: [],
+  imports: [FormsModule, CommonModule, ReactiveFormsModule],
   templateUrl: './cadastro.component.html',
   styleUrl: './cadastro.component.css'
 })
 export class CadastroComponent {
-
-  constructor(private rota: Router){}
+  usuario: Usuario = {
+    id: undefined,
+    nome: '',
+    dtNasc: '',
+    fotoPerfil: '',
+    email: '',
+    login: '',
+    senha: ''
+  };
+  constructor(private rota: Router,private usuarioService: UsuarioService){}
 
   redirecionaLogin(){
     this.rota.navigate(['/'])
+  }
+
+  cadastrar(){
+    const novoUsuario = { ...this.usuario };
+    delete novoUsuario.id;
+    this.usuarioService.cadastrarUsuario(novoUsuario).subscribe({
+      next: response => {
+        console.log('Usuário cadastrado com sucesso:', response);
+        alert('Cadastro realizado com sucesso!');
+      },
+      error: err => {
+        console.error('Erro ao cadastrar usuário:', err);
+        alert('Ocorreu um erro no cadastro. Tente novamente.');
+      }
+    });
+
   }
 
 }

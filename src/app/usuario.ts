@@ -2,7 +2,8 @@ export interface Usuario {
   id?: number,
   nome: string,
   dtNasc: string,
-  foto: String,
+  fotoPerfil: string,
+  email: string
   login: string,
   senha: string
 }

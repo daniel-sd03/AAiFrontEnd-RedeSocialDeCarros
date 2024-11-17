@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { FeedComponent } from "./components/feed/feed.component";
 import { LoginComponent } from './components/login/login.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
+import { ConfiguracaoComponent } from './components/configuracao/configuracao.component';
 
 
 @Component({
