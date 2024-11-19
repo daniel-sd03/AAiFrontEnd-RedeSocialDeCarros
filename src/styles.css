@@ -1,6 +1,9 @@
 body{
-  background-color: #17191b;
+  background-color: #000000;
+  font-family: 'Archivo', sans-serif;
 }
+
+
 ::-webkit-scrollbar {
   width: 12px;  /* Largura da barra de rolagem */
 }

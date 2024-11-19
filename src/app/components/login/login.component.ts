@@ -17,10 +17,6 @@ export class LoginComponent {
   usuarios: Usuario[] = [];
   email: String = "";
   senha: String = "";
-  usariolog = {
-    nome: '',
-    login: ''
-  };
 
   constructor(private rota: Router, private usuarioService: UsuarioService, private authService: AuthserviceService) { }
 
@@ -31,10 +27,7 @@ export class LoginComponent {
 
       for (const usuario of this.usuarios){
         if (usuario.login == this.email && usuario.senha == this.senha) {
-          this.usariolog.nome =  usuario.nome;
-          this.usariolog.login = usuario.login;
-          localStorage.setItem('usariolog', JSON.stringify(this.usariolog));//enviando dados do usuario logado
-          this.authService.login();//Enviando token de usuario logado
+          this.authService.login(usuario);//Enviando token de usuario logado
           this.rota.navigate(['/feed']);
           return;
         }

@@ -18,11 +18,11 @@ export class SidebarLeftComponent {
   }
 
   redirectPerfil(){
-    this.rota.navigate(['/pefil']);
+    this.rota.navigate(['/perfil']);
   }
 
   redirectConfig(){
-    this.rota.navigate(['/config']);
+    this.rota.navigate(['/configuracao']);
   }
 
   logout() {

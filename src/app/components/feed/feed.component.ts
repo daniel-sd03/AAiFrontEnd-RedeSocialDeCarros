@@ -22,7 +22,7 @@ export class FeedComponent implements OnInit {
   constructor(private rota: Router) {}
 
   ngOnInit(): void {
-    const usariologString = localStorage.getItem('usariolog');
+    const usariologString = localStorage.getItem('usuariolog');
 
     if (usariologString) {
       this.usariolog = JSON.parse(usariologString);
@@ -32,7 +32,7 @@ export class FeedComponent implements OnInit {
     }
   }
 
- 
+
 
 }
 
