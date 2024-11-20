@@ -9,6 +9,7 @@
       [(ngModel)]="novaPublicacao.fotoUrl"
       placeholder="URL da foto que deseja compartilhar..."
       required
+      pattern="https?://.+"
       #fotoUrl="ngModel"
     />
     <div *ngIf="fotoUrl.invalid && fotoUrl.touched" class="text-danger">
@@ -26,13 +27,11 @@
       rows="3"
       placeholder="Escreva o que está pensando sobre a foto..."
       required
-      minlength="10"
       maxlength="250"
       #legenda="ngModel"
     ></textarea>
     <div *ngIf="legenda.invalid && legenda.touched" class="text-danger">
       <small *ngIf="legenda.errors?.['required']">A legenda é obrigatória.</small>
-      <small *ngIf="legenda.errors?.['minlength']">A legenda deve ter pelo menos 10 caracteres.</small>
       <small *ngIf="legenda.errors?.['maxlength']">A legenda deve ter no máximo 250 caracteres.</small>
     </div>
   </div>
@@ -40,8 +39,7 @@
   <button
     type="submit"
     class="btn btn-primary"
-    [disabled]="form.invalid"
-  >
+    [disabled]="form.invalid">
     Postar
   </button>
 

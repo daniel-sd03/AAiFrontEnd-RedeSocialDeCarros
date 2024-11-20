@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavbarComponent } from "../../navbar/navbar.component";
 import { SidebarLeftComponent } from "../../sidebar/sidebar-left/sidebar-left.component";
 import { PublicacaoAddComponent } from "../publicacao-add/publicacao-add.component";
+import { publicacao } from '../../../publicacao';
+import { PublicacaoService } from '../../../services/publicacao/publicacao.service';
 
 @Component({
   selector: 'app-publicacao',
@@ -12,8 +14,21 @@ import { PublicacaoAddComponent } from "../publicacao-add/publicacao-add.compone
 })
 export class PublicacaoComponent {
 
-  postar(){
+  constructor(private publicaoService: PublicacaoService){}
 
+  adicionarPublicacao(publicacao: publicacao){
+    console.log("Passou aq 2");
+   this.publicaoService.cadastrarPublicacao(publicacao).subscribe({
+      next: response => {
+        console.log('publicação cadastrada com sucesso:', response);
+        alert('publicação realizado com sucesso!');
+      },
+      error: err => {
+        console.error('Erro ao fazer publicação:', err);
+        alert('Ocorreu um erro no cadastro. Tente novamente.');
+      }
+    });
   }
 
 }
+

@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UsuarioService } from '../../services/usuario.service';
 import { Usuario } from '../../usuario';
-import { provideHttpClient } from '@angular/common/http';
-import { AuthserviceService } from '../../services/authservice.service';
+import { AuthserviceService } from '../../services/authService/authservice.service';
+import { UsuarioService } from '../../services/usuario/usuario.service';
 
 @Component({
   selector: 'app-login',

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Usuario } from '../usuario';
+import { Usuario } from '../../usuario';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,6 @@ export class AuthserviceService {
   login(usuariolog: Usuario){
     localStorage.setItem('isLoggedIn', 'true');
     localStorage.setItem('usuariolog', JSON.stringify(usuariolog));//Mantendo os dados do usario logado em cache
-    alert(usuariolog);
   }
 
   logout(){

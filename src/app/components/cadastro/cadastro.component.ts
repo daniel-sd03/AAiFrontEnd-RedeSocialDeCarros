@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UsuarioService } from '../../services/usuario.service';
 import { Usuario } from '../../usuario';
 import { CommonModule } from '@angular/common';
+import { UsuarioService } from '../../services/usuario/usuario.service';
 
 @Component({
   selector: 'app-cadastro',

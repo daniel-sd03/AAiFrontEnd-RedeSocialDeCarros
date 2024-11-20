@@ -100,9 +100,12 @@
       "senha": ""
     }
   ],
-  "carros": [
+  "publicacao": [
     {
-      "id": "c476"
+      "id": "1",
+      "idUsuario": "2",
+      "legenda": "BMW 320i",
+      "fotoUrl": "https://fotos-jornaldocarro-estadao.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2022/10/31123549/BMW-Serie-3-2023-1.jpeg"
     }
   ]
 }

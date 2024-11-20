@@ -11,9 +11,9 @@
       <h3 class="mb-4">
         Areá de publicação</h3>
     </div>
-      <app-publicacao-add></app-publicacao-add>
-    <div class="formulario">
 
+    <div class="formulario">
+      <app-publicacao-add (publicacaoAdicionada) = "adicionarPublicacao($event)"></app-publicacao-add>
     </div>
   </div>
 
