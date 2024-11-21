@@ -4,49 +4,56 @@
 
   <!-- Sidebar esquerda -->
   <app-sidebar-left></app-sidebar-left>
-  
-  <!-- Conteúdo Central -->
-  <div class="content">
 
-    <div class="MensagemCOnt">
-      <h3 class="mb-4">
-        Configurações</h3>
+  <!-- Conteúdo Central -->
+  <div class="contCentral">
+
+    <div class="contConfig">
+      <h3 class="mb-4 tituloConfig">Configurações</h3>
     </div>
 
     <div class="formulario">
+
       <form>
         <div class="form-row">
-          <div class="form-group col-md-6">
-            <label>Nome</label>
-            <input type="text" class="form-control"  placeholder="Nome">
+          <div class="form-group col-md-6 position-relative">
+            <input type="text" id="nome" class="form-control floating-input" placeholder="Nome" required>
+            <label for="nome" class="floating-label">Nome</label>
           </div>
-          <div class="form-group col-md-6">
-            <label >Data de nascimento</label>
-            <input type="date" class="form-control"  placeholder="data de nascimento ">
+
+          <div class="form-group col-md-6 position-relative">
+            <input type="date" id="data-nascimento" class="form-control floating-input" placeholder=" " required>
+            <label for="data-nascimento" class="floating-label">Data de nascimento</label>
           </div>
         </div>
-        <div class="form-group">
-          <label>Email</label>
-          <input type="email" class="form-control"  placeholder="Email">
+
+        <div class="form-group position-relative">
+          <input type="email" id="email" class="form-control floating-input" placeholder="Email" required>
+          <label for="email" class="floating-label">Email</label>
         </div>
-        <div class="form-group">
-          <label>Foto de perfil (URL)</label>
-          <input type="url" class="form-control" placeholder="URL">
+
+        <div class="form-group position-relative">
+          <input type="url" id="foto" class="form-control floating-input" placeholder="foto de perfil" required>
+          <label for="foto" class="floating-label">Foto de perfil (URL)</label>
         </div>
 
         <div class="form-row">
-          <div class="form-group col-md-6">
-            <label>Login</label>
-            <input type="text" class="form-control"  placeholder="Login">
+          <div class="form-group col-md-6 position-relative">
+            <input type="text" id="login" class="form-control floating-input" placeholder="Login" required>
+            <label for="login" class="floating-label">Login</label>
           </div>
-          <div class="form-group col-md-6">
-            <label>Senha </label>
-            <input type="password" class="form-control"  placeholder="senha">
+          <div class="form-group col-md-6 position-relative">
+            <input type="password" id="senha" class="form-control floating-input" placeholder="senha" required>
+            <label for="senha" class="floating-label">Senha</label>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary">Salvar</button>
+
+        <button type="submit" class="btn">Salvar</button>
       </form>
+
     </div>
   </div>
 
+  <!--footer-->
+  <app-footer></app-footer>
 </body>

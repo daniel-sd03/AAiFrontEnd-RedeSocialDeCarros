@@ -1,118 +1,75 @@
-
-/* Importando a fonte Roboto */
 html,
 body {
   height: 100%;
   font-family: 'Agbalumo', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #17191b;
+  background-color: #000000;
   color: rgb(255, 255, 255);
 }
+
 label {
   color: white;
 }
-.formulario{
-  background-color: #212025;
+
+/*estilizando formulario*/
+.formulario {
+  background-color: #000000;
+  border: 1px;
   border-radius: 10px;
   padding: 10px;
-}
-.MensagemCOnt{
-    background-color: #212025;
-    border-radius: 10px;
-    padding-left: 10px;
+  top: 150px;
 }
 
-/* Estilização da barra lateral esquerda */
-#sidebar {
-  width: 250px;
-  position: fixed;
-  top: 56px;
-  left: 0;
-  background-color: #17191b;
-  height: calc(100vh - 56px);
-  padding-top: 1rem;
+.contConfig {
+  background-color: #000000;
+  padding-left: 40%;
 }
 
-/* Estilização da barra lateral direita */
-#sidebar-right {
-  width: 290px;
-  position: fixed;
-  top: 56px;
-  right: 0;
-  background-color: #151718;
-  height: 50%;
-  margin-top: 5%;
-  margin-right: 20px;
+.form-group {
+  margin-bottom: 20px;
+}
+
+.floating-input {
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  color: #eeeeee;
+  padding: 10px 10px 10px 20px;
   border-radius: 10px;
 }
 
-/* Estilização da navbar */
-.navbar {
-  background-color: #282a33;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  height: 56px;
+.floating-label {
+  position: absolute;
+  top: 0%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+  background-color: #000000;
+  padding: 0 5px;
 }
 
-.logo{
-  font-family: "Rubik Glitch", system-ui;
-  font-weight: 400;
-  font-style: normal;
+.floating-input:focus {
+  border-color: #800080;
+  outline: none;
 }
+
+/*Button*/
+button{
+  border-radius: 10px;
+  width: 100%;
+  background-color: #ac1aac;
+}
+
 
 /* Estilização do conteúdo central */
-.content {
+.contCentral {
   margin-left: 400px;
   margin-right: 400px;
   padding: 20px;
-  background-color: #17191b;
+  background-color: #000000;
   overflow-y: visible;
-  /* Adiciona rolagem vertical se o conteúdo exceder a altura */
   position: relative;
-  top: 56px;
-}
-
-.imgBandeira{
-  background-image: url("../../../assets/icon_bandeiraQuadriculada.png");
-  width: 40px;
-  height: 40px;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-.imgHome{
-  background-image: url("../../../assets/icone_home.png");
-  width: 40px;
-  height: 40px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-right: 10px;
-}
-.imgPerfil{
-  background-image: url("../../../assets/icone_perfil.webp");
-  width: 40px;
-  height: 40px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-right: 10px;
-}
-
-.imgConfig{
-  background-image: url("../../../assets/icone_config.png");
-  width: 40px;
-  height: 40px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-right: 10px;
-}
-
-.imgSair{
-  background-image: url("../../../assets/icone_sair.png");
-  width: 40px;
-  height: 40px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-right: 10px;
+  top: 120px;
 }

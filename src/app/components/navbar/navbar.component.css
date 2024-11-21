@@ -9,6 +9,7 @@
   height: 100px;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.237);
   }
+
 .logo{
   font-family: "Rubik Glitch", system-ui;
   font-weight: 400;
@@ -19,11 +20,13 @@
 .iconeSiderbar{
   font-size: 30px;
   cursor: pointer;
-  margin-left: 0; /* Garante que o ícone fique alinhado à borda */
-  position: absolute; /* Permite que você controle diretamente a posição */
-  left: 20px; /* Ajuste conforme necessário para controlar a distância da borda esquerda */
-  top: 50%; /* Centraliza verticalmente */
-  transform: translateY(-50%); /* Alinha verticalmente ao centro */
+  margin-left: 0;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: hsla(273, 100%, 50%);
 }
 
 

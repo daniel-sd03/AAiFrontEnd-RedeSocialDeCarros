@@ -1,12 +1,27 @@
-.titulo{
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.vh-100 {
+  min-height: 100vh;
+}
+
+.titulo {
   font-family: "Rubik Glitch", system-ui;
   font-weight: 400;
   font-style: normal;
 
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
+  justify-content: center;
   align-items: center;
 }
+
+.msgLoginInvalid {
+  color: rgba(255, 0, 0, 0.8);
+}
+
 .gradient-custom {
   /* fallback for old browsers */
   background: #1a1a2e;

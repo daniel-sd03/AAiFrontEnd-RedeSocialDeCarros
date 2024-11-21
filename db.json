@@ -61,7 +61,7 @@
       "fotoPerfil": "avatar2",
       "email": "a",
       "login": "a",
-      "senha": "d"
+      "senha": "daniel"
     },
     {
       "id": "f6f4",
@@ -71,33 +71,6 @@
       "email": "1",
       "login": "2d",
       "senha": "a"
-    },
-    {
-      "id": "8b57",
-      "nome": "",
-      "dtNasc": "",
-      "fotoPerfil": "",
-      "email": "",
-      "login": "",
-      "senha": ""
-    },
-    {
-      "id": "7b33",
-      "nome": "",
-      "dtNasc": "",
-      "fotoPerfil": "",
-      "email": "",
-      "login": "",
-      "senha": ""
-    },
-    {
-      "id": "51d9",
-      "nome": "",
-      "dtNasc": "",
-      "fotoPerfil": "",
-      "email": "",
-      "login": "",
-      "senha": ""
     }
   ],
   "publicacao": [
