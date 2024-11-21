@@ -1,20 +1,20 @@
+
 #sidebar {
   width: 250px;
   position: fixed;
-  top: 56px;
-  left: 0;
+  top: 100px;
+  left: -250px; /* Inicialmente escondido */
   background-color: #17191b;
   height: calc(100vh - 56px);
   padding-top: 1rem;
+  transition: left 0.3s ease;
 }
 
-.imgBandeira{
-  background-image: url("../../../../assets/icon_bandeiraQuadriculada.png");
-  width: 40px;
-  height: 40px;
-  background-size: contain;
-  background-repeat: no-repeat;
+#sidebar.open {
+  left: 0; /* Quando estiver aberto */
 }
+
+
 .imgHome{
   background-image: url("../../../../assets/icone_home.png");
   width: 40px;

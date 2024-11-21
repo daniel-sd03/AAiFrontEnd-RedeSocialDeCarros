@@ -1,14 +1,36 @@
 /* Estilização da navbar */
 .navbar {
-  background-color: #282a33;
+  background: radial-gradient(ellipse at top , hsla(273, 100%, 50%, 0.25) 6%, rgb(0, 0, 0) 70%);
+  background-color: rgba(0, 0, 0); /* Fundo semi-transparente */
   width: 100%;
   position: fixed;
   top: 0;
   z-index: 1000;
-  height: 56px;
-}
+  height: 100px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.237);
+  }
 .logo{
   font-family: "Rubik Glitch", system-ui;
   font-weight: 400;
   font-style: normal;
+  margin: 50px;
+}
+
+.iconeSiderbar{
+  font-size: 30px;
+  cursor: pointer;
+  margin-left: 0; /* Garante que o ícone fique alinhado à borda */
+  position: absolute; /* Permite que você controle diretamente a posição */
+  left: 20px; /* Ajuste conforme necessário para controlar a distância da borda esquerda */
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(-50%); /* Alinha verticalmente ao centro */
+}
+
+
+.imgBandeira{
+  background-image: url("../../../assets/icon_bandeiraQuadriculada.png");
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
