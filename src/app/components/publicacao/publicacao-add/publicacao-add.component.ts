@@ -20,7 +20,7 @@ export class PublicacaoAddComponent implements OnInit {
   novaPublicacao: publicacao = {
     idUsuario: 0,
     legenda: '',
-    fotoUrl: '',
+    imageUrl: '',
   };
 
   usuarioLog: Usuario | null = null;

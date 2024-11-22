@@ -1,0 +1,21 @@
+<body>
+  <!--Modelo de Postagem-->
+  <div class="post mb-4 p-3" style="color: #ffffff;">
+    <!--nome e foto-->
+    <div class="post-header d-flex align-items-center mb-2">
+      <!--se não tiver ft de perfil usar..."-->
+      <div class="ftPerfil">D</div>
+      <!--se tiver usar a foto-->
+      <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" width="40" height="40" style="margin-right: 10px;"
+        class="rounded-circle me-3 " alt="Perfil" />
+      <strong>{{usuario.nome}}</strong>
+    </div>
+    <!--legenda-->
+    <p>Essa é uma postagem incrível sobre carros! 🚗🔥 #carros #aventura</p>
+    <!--imagem-->
+    <div class="image-container">
+      <div class="blur-background" [ngStyle]="{ 'background-image': 'url(' + publicacao.imageUrl + ')' }"></div>
+      <img [src]="publicacao.imageUrl" alt="Imagem principal" class="main-image" [ngClass]="publicacao.imageClass"/>
+    </div>
+  </div>
+</body>

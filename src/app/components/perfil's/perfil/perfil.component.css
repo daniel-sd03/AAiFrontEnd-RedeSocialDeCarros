@@ -1,0 +1,23 @@
+
+/* Importando a fonte Roboto */
+html,
+body {
+  height: 100%;
+  font-family: 'Agbalumo', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: rgb(255, 255, 255);
+}
+.MensagemCOnt{
+    padding-left: 10px;
+}
+
+/* Estilização do conteúdo central */
+.content {
+  margin-left: 400px;
+  margin-right: 400px;
+  padding: 20px;
+  overflow-y: visible;
+  position: relative;
+  top: 150px;
+}

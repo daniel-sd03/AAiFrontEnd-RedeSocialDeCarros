@@ -6,20 +6,17 @@ body {
   padding: 0;
   color: rgb(255, 255, 255);
 }
+
 .msgConteudoCentral{
-    background-color: #212025;
-    border-radius: 10px;
     padding-left: 10px;
   }
 
 /* Estilização do conteúdo central */
-.content {
+.contCentral {
   margin-left: 400px;
   margin-right: 400px;
   padding: 20px;
   overflow-y: visible;
-  /* Adiciona rolagem vertical se o conteúdo exceder a altura */
   position: relative;
-  top: 56px;
+  top: 150px;
 }
-

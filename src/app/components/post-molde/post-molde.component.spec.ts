@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AuthServiceComponent } from './auth-service.component';
+import { PostMoldeComponent } from './post-molde.component';
 
-describe('AuthServiceComponent', () => {
-  let component: AuthServiceComponent;
-  let fixture: ComponentFixture<AuthServiceComponent>;
+describe('PostMoldeComponent', () => {
+  let component: PostMoldeComponent;
+  let fixture: ComponentFixture<PostMoldeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AuthServiceComponent]
+      imports: [PostMoldeComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AuthServiceComponent);
+    fixture = TestBed.createComponent(PostMoldeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
