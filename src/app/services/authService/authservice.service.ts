@@ -10,6 +10,10 @@ export class AuthserviceService {
 
   login(usuariolog: Usuario){
     localStorage.setItem('isLoggedIn', 'true');
+    this.atualizarDadosUsuario(usuariolog);
+  }
+
+  atualizarDadosUsuario(usuariolog: Usuario){
     localStorage.setItem('usuariolog', JSON.stringify(usuariolog));//Mantendo os dados do usario logado em cache
   }
 

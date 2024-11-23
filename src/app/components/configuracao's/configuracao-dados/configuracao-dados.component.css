@@ -1,17 +1,3 @@
-html,
-body {
-  height: 100%;
-  font-family: 'Agbalumo', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #000000;
-  color: rgb(255, 255, 255);
-}
-
-label {
-  color: white;
-}
-
 /*estilizando formulario*/
 .formulario {
   background-color: #000000;
@@ -21,13 +7,9 @@ label {
   top: 150px;
 }
 
-.contConfig {
-  background-color: #000000;
-  padding-left: 40%;
-}
-
 .form-group {
   margin-bottom: 20px;
+  position: relative;
 }
 
 .floating-input {
@@ -55,21 +37,46 @@ label {
   outline: none;
 }
 
-/*Button*/
-button{
+button {
   border-radius: 10px;
   width: 100%;
   background-color: #ac1aac;
 }
 
 
-/* Estilização do conteúdo central */
-.contCentral {
-  margin-left: 400px;
-  margin-right: 400px;
-  padding: 20px;
-  background-color: #000000;
-  overflow-y: visible;
-  position: relative;
-  top: 120px;
+.alterarIconeSenha {
+  position: absolute;
+  width: 10px;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+}
+
+.alterarIconeSenha i {
+  font-size: 1.5em;
+  color: #800080;
+}
+
+.msgDadoSalvo {
+  color: chartreuse;
+  padding-left: 40%;
+  padding-bottom: 10px;
+}
+
+.titulo {
+  padding-left: 35%;
+}
+
+.excluir {
+  padding-top: 30px;
+}
+
+.conteudoExcluir {
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.237);
+  margin-top: 40px;
 }

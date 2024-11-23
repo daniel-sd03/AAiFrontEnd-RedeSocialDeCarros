@@ -1,0 +1,71 @@
+<div class="formAtualizadaDados">
+  <div class="titulo">
+    <h3 class="mb-4 tituloConfig">Atualizar Dados</h3>
+  </div>
+
+  <form>
+    <div class="form-row">
+
+      <div class="form-group col-md-6 position-relative">
+        <input type="text" id="nome" class="form-control floating-input" placeholder="Nome" required name="nome"
+          [(ngModel)]="usuarioLog.nome">
+        <label for="nome" class="floating-label">Nome</label>
+      </div>
+
+      <div class="form-group col-md-6 position-relative">
+        <input type="date" id="data-nascimento" class="form-control floating-input" placeholder=" " required
+          name="data-nascimento" [(ngModel)]="usuarioLog.dtNasc">
+        <label for="data-nascimento" class="floating-label">Data de nascimento*</label>
+      </div>
+    </div>
+
+    <div class="form-group position-relative">
+      <input type="email" id="email" class="form-control floating-input" placeholder="Email" required name="email"
+        [(ngModel)]="usuarioLog.email">
+      <label for="email" class="floating-label">Email</label>
+    </div>
+
+
+    <div class="form-row">
+      <div class="form-group col-md-6 position-relative">
+        <input type="text" id="login" class="form-control floating-input" placeholder="Login" required name="login"
+          [(ngModel)]="usuarioLog.nomeUsuario">
+        <label for="login" class="floating-label">Login</label>
+      </div>
+
+      <div class="form-group col-md-6 position-relative">
+        <input type="password" id="senha" class="form-control floating-input" placeholder="senha" required name="senha"
+          [(ngModel)]="usuarioLog.senha">
+        <label for="senha" class="floating-label">Senha</label>
+        <button type="button" class="alterarIconeSenha">
+          <i [ngClass]="iconeSenha" (click)="alterarIconeSenha()"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="form-group position-relative">
+      <input type="url" id="foto" class="form-control floating-input" placeholder="foto de perfil" required
+        name="foto-perfil" [(ngModel)]="usuarioLog.fotoPerfil">
+      <label for="foto" class="floating-label">Foto de perfil (URL) (Opcional)</label>
+    </div>
+
+    <div *ngIf="isDadoSalvo" class="msgDadoSalvo">Dados atualizados com sucesso!</div>
+    <button type="submit" class="btn" (click)="alterarDados()">Salvar</button>
+  </form>
+</div>
+
+<div class="conteudoExcluir">
+  <h3 class="titulo excluir">Exclusão de contas</h3>
+  <p>Tem certeza de que deseja excluir sua conta? Esta ação é irreversível e resultará na perda permanente de todos os
+    seus dados, incluindo:</p>
+  <ul>
+    <li>Todos os seus posts, fotos e vídeos</li>
+    <li>Informações do perfil</li>
+    <li>Conexões e amigos</li>
+    <li>Mensagens e conversas</li>
+  </ul>
+  <p>Por favor, pense cuidadosamente antes de continuar.</p>
+
+  <button type="button" class="btn excluir-btn" (click)="deletarConta()">Excluir conta</button>
+
+</div>

@@ -16,7 +16,22 @@ export class UsuarioService {
     return this.http.get<Usuario[]>(this.urlUsuario);
   }
 
+  getUsuariosId(id: number): Observable<Usuario> {
+    const url = `${this.urlUsuario}/${id}`;
+    return this.http.get<Usuario>(url);
+  }
+
   cadastrarUsuario(usuario: Usuario): Observable<Usuario> {
     return this.http.post<Usuario>(this.urlUsuario, usuario);
+  }
+
+  atualizarDados(id: number, usuario: Usuario): Observable<Usuario>{
+    const url = `${this.urlUsuario}/${id}`;
+    return this.http.put<Usuario>(url, usuario);
+  }
+
+  deletarUsuario(id: number): Observable<void>{
+    const url = `${this.urlUsuario}/${id}`;
+    return this.http.delete<void>(url);
   }
 }
