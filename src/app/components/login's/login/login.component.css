@@ -1,0 +1,29 @@
+.gradient-custom {
+  background: #000000;
+  background: -webkit-linear-gradient(hsla(273, 100%, 50%, 0.2) 1%, rgb(0, 0, 0) 100%);
+  /*navegadores antigos*/
+  background: linear-gradient(hsla(273, 100%, 50%, 0.2) 1%, rgb(0, 0, 0) 100%);
+}
+
+.conteudoForm {
+  border-radius: 1rem;
+  border: none;
+  background: -webkit-linear-gradient(hsla(272, 80%, 10%, 0.7) 70%, rgb(0, 0, 0) 100%);
+}
+
+.vh-100 {
+  min-height: 100vh;
+}
+
+.titulo {
+  font-family: "Rubik Glitch", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.msgLoginInvalid {
+  color: rgba(255, 0, 0, 0.8);
+}
