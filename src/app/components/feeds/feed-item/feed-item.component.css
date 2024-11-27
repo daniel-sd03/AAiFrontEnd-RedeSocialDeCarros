@@ -1,22 +1,3 @@
-/*Estilo para letra do nome com foto de perfil*/
-.ftPerfil {
-  width: 40px; /* Define a largura do círculo */
-  height: 40px; /* Define a altura do círculo */
-  border-radius: 50%; /* Torna a div circular */
-  background-color: #800080; /* Cor de fundo (exemplo: roxo) */
-  color: white; /* Cor do texto */
-  display: flex; /* Usa flexbox para centralizar o conteúdo */
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  font-size: 25px; /* Ajustado para garantir centralização */
-  font-weight: bold; /* Negrito no texto */
-  text-transform: uppercase; /* Converte o texto para maiúsculas */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para dar um efeito de elevação */
-  line-height: 1; /* Garante que a altura da linha seja adequada */
-  padding-left: 3px; /* Remove qualquer padding extra */
-  margin: 0; /* Remove qualquer margem extra */
-}
-
 .contCentral{
   display: flex;
   align-items: center;

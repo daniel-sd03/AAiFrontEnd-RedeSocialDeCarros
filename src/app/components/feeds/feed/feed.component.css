@@ -1,11 +1,4 @@
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  color: rgb(255, 255, 255);
-}
 
 .msgConteudoCentral{
     padding-left: 10px;
@@ -13,10 +6,12 @@ body {
 
 /* Estilização do conteúdo central */
 .contCentral {
+  color: white;
   padding: 20px;
   overflow-y: visible;
-  top: 150px;
   align-items: center;
   justify-content: center;
   text-align: center;
+  z-index: -1;
+  margin-top: 100px;
 }

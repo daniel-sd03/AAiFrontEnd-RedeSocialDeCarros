@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { SidebarLeftComponent } from "../../sidebar/sidebar-left/sidebar-left.component";
 import { NavbarComponent } from "../../navbar/navbar.component";
+import { PostMoldeComponent } from "../../post-molde/post-molde.component";
+import { PerfilItemComponent } from "../perfil-item/perfil-item.component";
 
 @Component({
   selector: 'app-perfil',
   standalone: true,
-  imports: [SidebarLeftComponent, NavbarComponent],
+  imports: [SidebarLeftComponent, NavbarComponent, PostMoldeComponent, PerfilItemComponent],
   templateUrl: './perfil.component.html',
   styleUrl: './perfil.component.css'
 })

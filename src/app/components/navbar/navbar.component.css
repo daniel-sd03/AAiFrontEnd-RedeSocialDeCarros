@@ -1,15 +1,20 @@
 .navbar {
   background: radial-gradient(ellipse at top , hsla(273, 100%, 50%, 0.25) 6%, rgb(0, 0, 0) 70%);
   background-color: rgba(0, 0, 0); /* Fundo semi-transparente */
-
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.237);
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 .logo{
   font-family: "Rubik Glitch", system-ui;
   font-weight: 400;
   font-style: normal;
-
+color: white;
 }
 
 .iconeSidebar{
