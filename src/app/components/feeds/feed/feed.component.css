@@ -13,10 +13,10 @@ body {
 
 /* Estilização do conteúdo central */
 .contCentral {
-  margin-left: 400px;
-  margin-right: 400px;
   padding: 20px;
   overflow-y: visible;
-  position: relative;
   top: 150px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }

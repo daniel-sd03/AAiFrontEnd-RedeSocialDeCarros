@@ -40,6 +40,10 @@ export class SidebarLeftComponent implements OnInit{
     this.rota.navigate(['/configuracao']);
   }
 
+  redirectPublicar(){
+    this.rota.navigate(['/publicacao']);
+  }
+
   logout() {
     this.authService.logout();
     this.rota.navigate(['/']);

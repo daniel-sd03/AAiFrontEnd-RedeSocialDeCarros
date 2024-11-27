@@ -10,13 +10,13 @@
       "senha": "admin"
     },
     {
-      "id": "12e0",
-      "nome": "messi",
-      "dtNasc": "2003-12-19",
-      "fotoPerfil": "../../../assets/avatar-Perfil.avif",
-      "email": "messi@viscaBarca.com",
-      "nomeUsuario": "messi",
-      "senha": "messi"
+      "id": "b940",
+      "nome": "daniel",
+      "dtNasc": "12112-12-12",
+      "fotoPerfil": "",
+      "email": "daniel@teste",
+      "nomeUsuario": "daniel01",
+      "senha": "daniel01"
     }
   ],
   "publicacao": [

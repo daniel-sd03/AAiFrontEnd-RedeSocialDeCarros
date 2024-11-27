@@ -1,31 +1,20 @@
-/* Estilização da navbar */
 .navbar {
   background: radial-gradient(ellipse at top , hsla(273, 100%, 50%, 0.25) 6%, rgb(0, 0, 0) 70%);
   background-color: rgba(0, 0, 0); /* Fundo semi-transparente */
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  height: 100px;
+
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.237);
-  }
+}
 
 .logo{
   font-family: "Rubik Glitch", system-ui;
   font-weight: 400;
   font-style: normal;
-  margin: 50px;
+
 }
 
-.iconeSiderbar{
+.iconeSidebar{
   font-size: 30px;
   cursor: pointer;
-  margin-left: 0;
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
   color: hsla(273, 100%, 50%);
 }
 
@@ -36,4 +25,4 @@
   height: 40px;
   background-size: contain;
   background-repeat: no-repeat;
-}
+} 
