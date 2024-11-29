@@ -2,8 +2,8 @@
   <div class="form-group row mb-4">
     <label for="nome" class="col-sm-3 col-form-label">Nome</label>
     <div class="col-sm-9">
-      <input type="text" id="nome" class="form-control form-control-lg" name="nome"
-        [(ngModel)]="usuario.nome" required minlength="3" #nome="ngModel" placeholder="nome"/>
+      <input type="text" id="nome" class="form-control form-control-lg" name="nome" [(ngModel)]="usuario.nome" required
+        minlength="3" #nome="ngModel" placeholder="nome" />
       <div *ngIf="nome.invalid && nome.touched" class="text-danger">
         <small *ngIf="nome.errors?.['required']">O nome é obrigatório.</small>
         <small *ngIf="nome.errors?.['minlength']">O nome deve ter pelo menos 3 caracteres.</small>
@@ -14,10 +14,11 @@
   <div class="form-group row mb-4">
     <label for="dtNasc" class="col-sm-3 col-form-label">Data de Nascimento</label>
     <div class="col-sm-9">
-      <input type="date" id="dtNasc" class="form-control form-control-lg" name="dtNasc"
-        [(ngModel)]="usuario.dtNasc" required #dtNasc="ngModel" />
+      <input type="date" id="dtNasc" class="form-control form-control-lg" name="dtNasc" [(ngModel)]="usuario.dtNasc"
+        required maxlength="10" #dtNasc="ngModel" />
       <div *ngIf="dtNasc.invalid && dtNasc.touched" class="text-danger">
-        <small>Data de nascimento é obrigatória.</small>
+        <small *ngIf="dtNasc.errors?.['required']">Data de nascimento é obrigatória.</small>
+        <small *ngIf="dtNasc.errors?.['maxlength']">Data de nascimento inválida</small>
       </div>
     </div>
   </div>
@@ -25,11 +26,14 @@
   <div class="form-group row mb-4">
     <label for="email" class="col-sm-3 col-form-label">Email</label>
     <div class="col-sm-9">
-      <input type="email" id="email" class="form-control form-control-lg" name="email"
-        [(ngModel)]="usuario.email" required #email="ngModel" placeholder="email@exemplo.com"/>
+      <input type="email" id="email" class="form-control form-control-lg" name="email" [(ngModel)]="usuario.email"
+        required #email="ngModel" placeholder="email@exemplo.com" />
+
       <div *ngIf="email.invalid && email.touched" class="text-danger">
-        <small *ngIf="email.errors?.['Email']">Digite um email válido.</small>
         <small *ngIf="email.errors?.['required']">O email é obrigatório.</small>
+      </div>
+      <div *ngIf="!isEmailValido() && email.touched  && email.value" class="text-danger">
+        <small>Digite um email válido.</small>
       </div>
     </div>
   </div>
@@ -38,8 +42,7 @@
     <label for="nomeUsuario" class="col-sm-3 col-form-label">Nome de Usuario</label>
     <div class="col-sm-9">
       <input type="text" id="nomeUsuario" placeholder="@nomeUsuario" class="form-control form-control-lg"
-        name="nomeUsuario" [(ngModel)]="usuario.nomeUsuario" required minlength="3"
-        #nomeUsuario="ngModel"/>
+        name="nomeUsuario" [(ngModel)]="usuario.nomeUsuario" required minlength="3" #nomeUsuario="ngModel" />
       <div *ngIf="nomeUsuario.invalid && nomeUsuario.touched" class="text-danger">
         <small *ngIf="nomeUsuario.errors?.['required']">O nome de usuario é obrigatório.</small>
         <small *ngIf="nomeUsuario.errors?.['minlength']">O nome de usuario deve ter pelo menos 3
@@ -51,12 +54,16 @@
   <div class="form-group row mb-4">
     <label for="senha" class="col-sm-3 col-form-label">Senha</label>
     <div class="col-sm-9">
-      <input type="password" id="senha" class="form-control form-control-lg" name="senha"
-        [(ngModel)]="usuario.senha" required #senha="ngModel" placeholder="senha" />
+      <input type="password" id="senha" class="form-control form-control-lg" name="senha" [(ngModel)]="usuario.senha"
+        required #senha="ngModel" placeholder="senha" />
       <div *ngIf="senha.invalid && senha.touched" class="text-danger">
         <small *ngIf="senha.errors?.['required']">A senha é obrigatório.</small>
       </div>
     </div>
+  </div>
+
+  <div *ngIf="isDadoInvalid" class="msgDadoInvalid">
+    <p>{{msgDadoInvalid}}</p>
   </div>
 
   <button class="btn btn-outline-light btn-lg px-5 d-block mx-auto" type="submit" [disabled]="form.invalid"

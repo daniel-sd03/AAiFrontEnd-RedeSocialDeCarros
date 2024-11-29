@@ -21,6 +21,14 @@
   color: hsla(273, 100%, 50%);
 }
 
+.custom-icon.submenu{
+  font-size: 1.5rem;
+}
+
+.contSubMenu{
+  margin-left: 30px;
+}
+
 .btn-icon {
   width: 50%;
   height: 50px;
@@ -55,9 +63,9 @@
   margin-right: 8px;
   border: 2px solid hsla(273, 100%, 50%);
 }
-
+/*
 @media (max-width: 768px) {
   #sidebar.open {
     left: 0px;
   }
-}
+} */

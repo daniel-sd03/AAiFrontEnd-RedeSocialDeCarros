@@ -14,15 +14,20 @@ import { SiderbarService } from '../../../services/siderbar/siderbar.service';
 export class SidebarLeftComponent implements OnInit{
 
   isSidebarOpen: boolean = false;
+  isConfigMenuOpen: boolean = true;
 
   constructor(private rota: Router, private authService: AuthserviceService, private sidebarService: SiderbarService){}
 
   ngOnInit(): void {
-      // Inscreve-se no estado do sidebar
       this.sidebarService.getSidebarStatus().subscribe(status => {
-        this.isSidebarOpen = status; // Atualiza o estado do sidebar
+        this.isSidebarOpen = status;
       });
   }
+
+  alternarConfigMenu(){
+    this.isConfigMenuOpen = !this.isConfigMenuOpen;
+  }
+
 
   toggleSidebar() {
     this.isSidebarOpen = !this.isSidebarOpen;

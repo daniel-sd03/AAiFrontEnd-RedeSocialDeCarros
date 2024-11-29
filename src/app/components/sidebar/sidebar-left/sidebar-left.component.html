@@ -16,20 +16,34 @@
         <span class="text-white">Inicio</span>
       </button>
     </li>
-    
-
-    <li class="nav-item d-flex align-items-center mb-4">
-      <button class="btn-icon" (click)="redirectConfig()">
-        <i class="bi bi-gear custom-icon"></i>
-        <span class="text-white">Configurações</span>
-      </button>
-    </li>
 
     <li class="nav-item d-flex align-items-center mb-4">
       <button class="btn-icon" (click)="redirectPublicar()">
         <i class="bi bi-plus-circle custom-icon"></i>
         <span class="text-white">Nova Publicação</span>
       </button>
+    </li>
+
+    <li class="nav-item d-flex flex-column align-items-start mb-4">
+      <button class="btn-icon d-flex align-items-center" (click)="alternarConfigMenu()">
+        <i class="bi bi-gear custom-icon"></i>
+        <span class="text-white">Configurações</span>
+        <i class="bi" [ngClass]="{'bi-caret-down-fill': !isConfigMenuOpen, 'bi-caret-up-fill': isConfigMenuOpen}" class="ms-2"></i>
+      </button>
+
+      <ul class="nav flex-column ms-4 mt-2 contSubMenu" *ngIf="isConfigMenuOpen">
+        <li class="nav-item mb-2">
+          <button class="btn-icon">
+            <i class="bi bi-person custom-icon submenu"></i>
+            <span class="text-white">Atualizar Dados</span>
+          </button>
+        </li>
+        <li class="nav-item mb-2">
+          <button class="btn-icon" >
+            <i class="bi bi-shield-lock custom-icon submenu"></i>
+            <span class="text-white">Excluir Conta</span>
+          </button>
+      </ul>
     </li>
 
     <li class="nav-item d-flex align-items-center mb-4">

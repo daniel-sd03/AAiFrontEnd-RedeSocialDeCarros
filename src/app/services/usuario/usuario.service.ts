@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Usuario } from '../../usuario';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -16,13 +16,19 @@ export class UsuarioService {
     return this.http.get<Usuario[]>(this.urlUsuario);
   }
 
-  getUsuariosId(id: number): Observable<Usuario> {
+  getUsuarioId(id: number): Observable<Usuario> {
     const url = `${this.urlUsuario}/${id}`;
     return this.http.get<Usuario>(url);
   }
 
   cadastrarUsuario(usuario: Usuario): Observable<Usuario> {
     return this.http.post<Usuario>(this.urlUsuario, usuario);
+  }
+
+  verificarDadoExistente(tipo: keyof Usuario, valor: string): Observable<boolean> {
+    return this.http.get<Usuario[]>(this.urlUsuario).pipe(
+      map(usuarios => usuarios.some(usuario => usuario[tipo] === valor))
+    );
   }
 
   atualizarDados(id: number, usuario: Usuario): Observable<Usuario>{

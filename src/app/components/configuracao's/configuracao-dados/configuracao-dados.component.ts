@@ -31,7 +31,7 @@ export class ConfiguracaoDadosComponent implements OnInit {
   }
 
   atualizarDados(){
-    this.usuarioService.getUsuariosId(this.usuarioLog.id!).subscribe((dado) => {
+    this.usuarioService.getUsuarioId(this.usuarioLog.id!).subscribe((dado) => {
       this.usuarioLog = dado;
     })
     this.authService.atualizarDadosUsuario(this.usuarioLog);
