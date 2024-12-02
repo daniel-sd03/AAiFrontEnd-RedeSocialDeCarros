@@ -1,12 +1,9 @@
-.msgConteudoCentral{
-    padding-left: 10px;
-  }
-
 /* Estilização do conteúdo central */
 .contCentral {
   color: white;
   padding: 20px;
   overflow-y: visible;
+  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;

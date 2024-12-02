@@ -1,6 +1,9 @@
+
+
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ConfiguracaoDadosComponent } from './configuracao-dados.component';
+import { ConfiguracaoDadosComponent } from './atualizaDado-dados.component';
 
 describe('ConfiguracaoDadosComponent', () => {
   let component: ConfiguracaoDadosComponent;

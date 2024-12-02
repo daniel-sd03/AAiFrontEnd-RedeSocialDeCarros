@@ -30,10 +30,10 @@
         <span class="text-white">Configurações</span>
         <i class="bi" [ngClass]="{'bi-caret-down-fill': !isConfigMenuOpen, 'bi-caret-up-fill': isConfigMenuOpen}" class="ms-2"></i>
       </button>
-
+      <!-- subMenu Config -->
       <ul class="nav flex-column ms-4 mt-2 contSubMenu" *ngIf="isConfigMenuOpen">
         <li class="nav-item mb-2">
-          <button class="btn-icon">
+          <button class="btn-icon" (click)="redirectAtualizaDado()">
             <i class="bi bi-person custom-icon submenu"></i>
             <span class="text-white">Atualizar Dados</span>
           </button>

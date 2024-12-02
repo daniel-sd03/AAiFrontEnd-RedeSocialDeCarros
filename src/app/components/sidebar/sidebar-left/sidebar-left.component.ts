@@ -29,7 +29,7 @@ export class SidebarLeftComponent implements OnInit{
   }
 
 
-  toggleSidebar() {
+  alternarSidebar() {
     this.isSidebarOpen = !this.isSidebarOpen;
   }
 
@@ -41,8 +41,8 @@ export class SidebarLeftComponent implements OnInit{
     this.rota.navigate(['/perfil']);
   }
 
-  redirectConfig(){
-    this.rota.navigate(['/configuracao']);
+  redirectAtualizaDado(){
+    this.rota.navigate(['/atulizarDados']);
   }
 
   redirectPublicar(){

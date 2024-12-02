@@ -7,13 +7,13 @@ import { AuthserviceService } from '../../../services/authService/authservice.se
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-configuracao-dados',
+  selector: 'app-atualizaDado-dados',
   standalone: true,
   imports: [FormsModule, CommonModule],
-  templateUrl: './configuracao-dados.component.html',
-  styleUrl: './configuracao-dados.component.css'
+  templateUrl: './atualizaDado-dados.component.html',
+  styleUrl: './atualizaDado-dados.component.css'
 })
-export class ConfiguracaoDadosComponent implements OnInit {
+export class atualizaDadodadosComponent implements OnInit {
   usuarioLog!: Usuario;
   iconeSenha: string = 'bi bi-eye';
   visivelSenha: boolean = false;
