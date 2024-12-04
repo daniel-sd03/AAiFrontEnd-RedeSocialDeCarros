@@ -2,6 +2,9 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { PostMoldeComponent } from "../../post-molde/post-molde.component";
 import { Usuario } from '../../../usuario';
+import { UsuarioService } from '../../../services/usuario/usuario.service';
+import { PublicacaoService } from '../../../services/publicacao/publicacao.service';
+import { publicacao } from '../../../publicacao';
 
 @Component({
   selector: 'app-feed-item',
@@ -11,16 +14,19 @@ import { Usuario } from '../../../usuario';
   styleUrl: './feed-item.component.css'
 })
 export class FeedItemComponent implements OnInit {
-  usuarioLog!: Usuario;
+  usuarios: Usuario[] = [];
+  publicacoes: publicacao[] = [];
 
-  publicacao = { idUsuario: 0, legenda: '', imageUrl: 'https://motorshow.com.br/wp-content/uploads/sites/2/2019/03/8_ms426_formula1_1-e1580995498795.jpg'};
+
+  constructor(private ususarioService: UsuarioService, private publicacaoService: PublicacaoService){} 
 
   ngOnInit(): void {
-    const usariologString = localStorage.getItem('usuariolog');
-    if (usariologString) {
-      this.usuarioLog = JSON.parse(usariologString);
-    } else {
-      alert("erro");
-    }
+  this.getPublicacao();
+  }
+
+  getPublicacao() {
+    this.publicacaoService.getPublicacao().subscribe((dado) => {
+      this.publicacoes = dado;
+    })
   }
 }

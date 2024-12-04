@@ -60,4 +60,5 @@
   line-height: 1; /* Garante que a altura da linha seja adequada */
   padding-left: 3px; /* Remove qualquer padding extra */
   margin: 0; /* Remove qualquer margem extra */
+  margin-right: 10px;
 }
