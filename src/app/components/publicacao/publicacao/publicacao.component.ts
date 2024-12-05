@@ -20,8 +20,6 @@ export class PublicacaoComponent {
     console.log("Passou aq 2");
    this.publicaoService.cadastrarPublicacao(publicacao).subscribe({
       next: response => {
-        console.log('publicação cadastrada com sucesso:', response);
-        alert('publicação realizado com sucesso!');
       },
       error: err => {
         console.error('Erro ao fazer publicação:', err);

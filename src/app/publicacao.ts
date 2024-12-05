@@ -4,4 +4,5 @@ export interface publicacao {
   legenda: string,
   imageUrl: String,
   imageclass?: String
+  dtPublicacao: string
 }

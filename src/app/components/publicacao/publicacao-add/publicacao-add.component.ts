@@ -15,12 +15,13 @@ import { publicacao } from '../../../publicacao';
 export class PublicacaoAddComponent implements OnInit {
 
   @Output() publicacaoAdicionada = new EventEmitter<any>();
-
+  isPublicaEnviada: boolean = false;
   //inicializando variaveis
   novaPublicacao: publicacao = {
     idUsuario: 0,
     legenda: '',
     imageUrl: '',
+    dtPublicacao: ''
   };
 
   usuarioLog: Usuario | null = null;
@@ -34,9 +35,28 @@ export class PublicacaoAddComponent implements OnInit {
     }
   }
 
+  capturarDataHora(): string {
+    const agora = new Date();
+    const ano = agora.getFullYear();
+    const mes = String(agora.getMonth() + 1).padStart(2, '0');
+    const dia = String(agora.getDate()).padStart(2, '0');
+    const hora = String(agora.getHours()).padStart(2, '0');
+    const minuto = String(agora.getMinutes()).padStart(2, '0');
+
+    // Formata a data e hora para o formato 'YYYY-MM-DD HH:mm'
+    return `${ano}-${mes}-${dia} ${hora}:${minuto}`;
+  }
+
   adicionarPublicacao() {
+    this.novaPublicacao.dtPublicacao = this.capturarDataHora();
     this.novaPublicacao.idUsuario = this.usuarioLog!.id!;
     this.publicacaoAdicionada.emit(this.novaPublicacao);
-    console.log("Passou aq 1")
+    this.isPublicaEnviada = true;
+    this.novaPublicacao = {
+      idUsuario: 0,
+      legenda: '',
+      imageUrl: '',
+      dtPublicacao: ''
+    };
   }
 }

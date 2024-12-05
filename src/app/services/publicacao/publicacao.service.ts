@@ -12,11 +12,15 @@ export class PublicacaoService {
 
   constructor(private http: HttpClient) { }
 
-  getPublicacao (): Observable<publicacao[]>{
+  getPublicacao(): Observable<publicacao[]> {
     return this.http.get<publicacao[]>(this.urlPublicao);
   }
 
-  cadastrarPublicacao(publicacao: publicacao): Observable<publicacao>{
+  getPublicacoesPorUsuario(idUsuario: number): Observable<publicacao[]> {
+    return this.http.get<publicacao[]>(`${this.urlPublicao}?idUsuario=${idUsuario}`);
+  }
+  
+  cadastrarPublicacao(publicacao: publicacao): Observable<publicacao> {
     return this.http.post<publicacao>(this.urlPublicao, publicacao);
   }
 }

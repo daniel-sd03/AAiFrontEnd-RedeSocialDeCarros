@@ -49,6 +49,8 @@ export class PostMoldeComponent  implements OnInit{
     if(!this.usuario.fotoPerfil) {
       this.primeiraLetra = this.getPrimeiraLetra(this.usuario.nome);
       this.isFtPerfil = false;
+    }else{
+      this.isFtPerfil = true;
     }
   }
   getPrimeiraLetra(dado: String): string {

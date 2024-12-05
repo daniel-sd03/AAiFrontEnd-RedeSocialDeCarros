@@ -1,5 +1,5 @@
 <div class="contFormulario">
-  <form #form="ngForm" (ngSubmit)="adicionarPublicacao()" novalidate>
+  <form #form="ngForm" novalidate>
     <div class="form-group position-relative">
       <input
         type="url"
@@ -37,8 +37,8 @@
         <small *ngIf="legenda.errors?.['maxlength']">A legenda deve ter no máximo 250 caracteres.</small>
       </div>
     </div>
-
-    <button type="button" class="btn" [disabled]="form.invalid">
+    <div class="contPublicEnviada" *ngIf="isPublicaEnviada">Publicação enviado com sucesso</div>
+    <button type="button" class="btn" [disabled]="form.invalid" (click)="adicionarPublicacao()">
       Postar
     </button>
   </form>

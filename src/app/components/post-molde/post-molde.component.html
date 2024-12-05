@@ -5,17 +5,17 @@
 
     <!--se não tiver ft de perfil usar..."-->
     <div *ngIf="!isFtPerfil" class="ftPerfil">{{primeiraLetra}}</div>
+    
     <div  *ngIf="isFtPerfil">
       <!--se tiver usar a foto-->
-      <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" width="40" height="40" style="margin-right: 10px;"
-        class="rounded-circle me-3 " alt="Perfil" />
+      <div class="imgPerfil" [ngStyle]="{ 'background-image': 'url(' + usuario?.fotoPerfil + ')' }"></div>
     </div>
 
-    <strong>{{usuario.nome}}</strong>
+    <strong>{{usuario?.nome}}</strong>
   </div>
   <div class="contLegenda">
     <!--legenda-->
-    <p>Essa é uma postagem incrível sobre carros! 🚗🔥 #carros #aventura</p>
+    <p>{{publicacao?.legenda}}</p>
   </div>
   <!--imagem-->
   <div class="image-container">
