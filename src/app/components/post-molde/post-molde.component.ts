@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { publicacao } from '../../publicacao';
+import { Usuario } from '../../usuario';
+import { UsuarioService } from '../../services/usuario/usuario.service';
 
 @Component({
   selector: 'app-post-molde',
@@ -11,9 +13,14 @@ import { publicacao } from '../../publicacao';
 })
 export class PostMoldeComponent  implements OnInit{
   @Input() publicacao: any;
-  @Input() usuario: any;
+  usuario!:Usuario;
+  isFtPerfil!: boolean;
+  primeiraLetra: string = '';
+
+  constructor(private ususarioService: UsuarioService){}
 
   ngOnInit(): void {
+    this.getUsuario();
     this.validandoFormatoImg();
   }
 
@@ -35,5 +42,26 @@ export class PostMoldeComponent  implements OnInit{
     } else {
       this.publicacao.imageClass = ''; // Reset if no URL
     }
+  }
+
+
+  validarFtPerfil() {
+    if(!this.usuario.fotoPerfil) {
+      this.primeiraLetra = this.getPrimeiraLetra(this.usuario.nome);
+      this.isFtPerfil = false;
+    }
+  }
+  getPrimeiraLetra(dado: String): string {
+    return dado ? dado.charAt(0).toUpperCase(): '';
+  }
+
+  getUsuario(){
+    this.ususarioService.getUsuarioId(this.publicacao.idUsuario).subscribe((dado) => {
+      this.usuario = dado;
+      this.validarFtPerfil();
+    }, (erro) => {
+      alert("Infelizmente tivemos um erro entre!!! Tente novamente mais tarde");
+      console.error('Erro ao carregar usuário', erro);
+    });
   }
 }

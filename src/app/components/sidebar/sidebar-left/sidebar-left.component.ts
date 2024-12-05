@@ -11,41 +11,46 @@ import { SiderbarService } from '../../../services/siderbar/siderbar.service';
   templateUrl: './sidebar-left.component.html',
   styleUrl: './sidebar-left.component.css'
 })
-export class SidebarLeftComponent implements OnInit{
+export class SidebarLeftComponent implements OnInit {
 
   isSidebarOpen: boolean = false;
-  isConfigMenuOpen: boolean = true;
+  isConfigMenuOpen: boolean = false;
 
-  constructor(private rota: Router, private authService: AuthserviceService, private sidebarService: SiderbarService){}
+  constructor(private rota: Router, private authService: AuthserviceService, private sidebarService: SiderbarService) { }
 
   ngOnInit(): void {
-      this.sidebarService.getSidebarStatus().subscribe(status => {
-        this.isSidebarOpen = status;
-      });
+    this.sidebarService.getSidebarStatus().subscribe(status => {
+      this.isSidebarOpen = status;
+    });
   }
 
-  alternarConfigMenu(){
-    this.isConfigMenuOpen = !this.isConfigMenuOpen;
-  }
 
 
   alternarSidebar() {
     this.isSidebarOpen = !this.isSidebarOpen;
   }
 
-  redirectHome(){
+  redirectHome() {
     this.rota.navigate(['/feed']);
   }
 
-  redirectPerfil(){
+  redirectPerfil() {
     this.rota.navigate(['/perfil']);
   }
 
-  redirectAtualizaDado(){
+  alternarConfigMenu() {
+    this.isConfigMenuOpen = !this.isConfigMenuOpen;
+  }
+
+  redirectAtualizaDado() {
     this.rota.navigate(['/atulizarDados']);
   }
 
-  redirectPublicar(){
+  redirectExcluirConta() {
+    this.rota.navigate(['/excluirConta'])
+  }
+
+  redirectPublicar() {
     this.rota.navigate(['/publicacao']);
   }
 

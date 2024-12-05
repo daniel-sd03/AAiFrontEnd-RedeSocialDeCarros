@@ -7,9 +7,12 @@ import { atualizaDadodadosComponent } from "../atualizaDado-dados/atualizaDado-d
 @Component({
   selector: 'app-configuracao',
   standalone: true,
-  imports: [NavbarComponent, SidebarLeftComponent, FooterComponent, atualizaDadodadosComponent],
+  imports: [NavbarComponent, SidebarLeftComponent, atualizaDadodadosComponent],
   templateUrl: './atualizaDado.component.html',
   styleUrl: './atualizaDado.component.css'
 })
 export class AtualizaDadoComponent {
+
+
+
 }

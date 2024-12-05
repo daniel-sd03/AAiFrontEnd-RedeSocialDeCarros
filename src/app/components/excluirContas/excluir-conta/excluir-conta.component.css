@@ -1,0 +1,12 @@
+/* Estilização do conteúdo central */
+.contCentral {
+    color: white;
+    padding: 20px;
+    overflow-y: visible;
+    display: flex;
+    align-items: auto;
+    justify-content: center;
+    text-align: center;
+    z-index: -1;
+    margin-top: 100px;
+  }

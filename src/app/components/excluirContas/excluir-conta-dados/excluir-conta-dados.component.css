@@ -1,0 +1,18 @@
+.conteudoExcluir{
+    width: 120vh;
+    text-align: justify;
+}
+h2,
+h3{
+    text-align: center;
+}
+
+.excluir {
+    padding-top: 30px;
+}
+
+button {
+    border-radius: 10px;
+    width: 100%;
+    background-color: #ac1aac;
+}
