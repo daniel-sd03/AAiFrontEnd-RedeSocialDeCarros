@@ -1,0 +1,36 @@
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.floating-input {
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  color: #eeeeee;
+  padding: 10px 10px 10px 20px;
+  border-radius: 10px;
+}
+
+.floating-label {
+  position: absolute;
+  top: 0%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+  background-color: #000000;
+  padding: 0 5px;
+}
+
+.floating-input:focus {
+  border-color: #800080;
+  outline: none;
+}
+
+button {
+  color: black;
+  border-radius: 10px;
+  width: 100%;
+  background-color: #ac1aac;
+}

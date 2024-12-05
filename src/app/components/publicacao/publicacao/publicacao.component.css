@@ -1,34 +1,25 @@
 
-/* Importando a fonte Roboto */
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  color: rgb(255, 255, 255);
-}
 label {
   color: white;
 }
 
 .formulario{
-  background-color: #212025;
-  border-radius: 10px;
   padding: 10px;
 }
 .msgTitulo{
-    background-color: #212025;
-    border-radius: 10px;
     padding-left: 10px;
 }
 /* Estilização do conteúdo central */
-.content {
-  margin-left: 400px;
-  margin-right: 400px;
+.contCentral {
+  color: white;
   padding: 20px;
-  background-color: #17191b;
   overflow-y: visible;
-  position: relative;
-  top: 150px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: -1;
+  margin-top: 100px;
+  margin: 100px auto; /* Centraliza horizontalmente */
+  width: 70%; /* Largura relativa */
+  max-width: 1080px
 }
-

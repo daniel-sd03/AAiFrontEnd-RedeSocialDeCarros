@@ -1,46 +1,45 @@
-<form #form="ngForm" (ngSubmit)="adicionarPublicacao()" novalidate>
-
-  <div class="form-group">
-    <label>Foto (URL)</label>
-    <input
-      type="url"
-      class="form-control"
-      name="imageUrl"
-      [(ngModel)]="novaPublicacao.imageUrl"
-      placeholder="URL da foto que deseja compartilhar..."
-      required
-      pattern="https?://.+"
-      #fotoUrl="ngModel"
-    />
-    <div *ngIf="fotoUrl.invalid && fotoUrl.touched" class="text-danger">
-      <small *ngIf="fotoUrl.errors?.['required']">A URL da foto é obrigatória.</small>
-      <small *ngIf="fotoUrl.errors?.['pattern']">Digite uma URL válida.</small>
+<div class="contFormulario">
+  <form #form="ngForm" (ngSubmit)="adicionarPublicacao()" novalidate>
+    <div class="form-group position-relative">
+      <input
+        type="url"
+        id="foto-url"
+        class="form-control floating-input"
+        name="imageUrl"
+        [(ngModel)]="novaPublicacao.imageUrl"
+        placeholder="URL da foto que deseja compartilhar..."
+        required
+        pattern="https?://.+"
+        #fotoUrl="ngModel"
+      />
+      <label for="foto-url" class="floating-label">Foto (URL)</label>
+      <div *ngIf="fotoUrl.invalid && fotoUrl.touched" class="text-danger">
+        <small *ngIf="fotoUrl.errors?.['required']">A URL da foto é obrigatória.</small>
+        <small *ngIf="fotoUrl.errors?.['pattern']">Digite uma URL válida.</small>
+      </div>
     </div>
-  </div>
 
-  <div class="form-group">
-    <label>Legenda</label>
-    <textarea
-      class="form-control"
-      name="legenda"
-      [(ngModel)]="novaPublicacao.legenda"
-      rows="3"
-      placeholder="Escreva o que está pensando sobre a foto..."
-      required
-      maxlength="250"
-      #legenda="ngModel"
-    ></textarea>
-    <div *ngIf="legenda.invalid && legenda.touched" class="text-danger">
-      <small *ngIf="legenda.errors?.['required']">A legenda é obrigatória.</small>
-      <small *ngIf="legenda.errors?.['maxlength']">A legenda deve ter no máximo 250 caracteres.</small>
+    <div class="form-group position-relative">
+      <textarea
+        id="legenda"
+        class="form-control floating-input"
+        name="legenda"
+        [(ngModel)]="novaPublicacao.legenda"
+        rows="3"
+        placeholder=" "
+        required
+        maxlength="250"
+        #legenda="ngModel"
+      ></textarea>
+      <label for="legenda" class="floating-label">Legenda</label>
+      <div *ngIf="legenda.invalid && legenda.touched" class="text-danger">
+        <small *ngIf="legenda.errors?.['required']">A legenda é obrigatória.</small>
+        <small *ngIf="legenda.errors?.['maxlength']">A legenda deve ter no máximo 250 caracteres.</small>
+      </div>
     </div>
-  </div>
 
-  <button
-    type="submit"
-    class="btn btn-primary"
-    [disabled]="form.invalid">
-    Postar
-  </button>
-
-</form>
+    <button type="button" class="btn" [disabled]="form.invalid">
+      Postar
+    </button>
+  </form>
+</div>
